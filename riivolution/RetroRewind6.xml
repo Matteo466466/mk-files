@@ -1,0 +1,755 @@
+<wiidisc version="1">
+	<id game="RMC"/>
+	<options>
+		<section name="Retro Rewind">
+			<option name="Pack">
+				<choice name="Enabled">
+					<patch id="RRLoadPack"/>
+					<patch id="RRFileReplacements"/>
+				</choice>
+			</option>
+			<option name="Language">
+				<choice name="Japanese">
+					<patch id="RRLoadPackJPN"/>
+				</choice>
+				<choice name="French">
+					<patch id="RRLoadPackFRE"/>
+				</choice>
+				<choice name="German">
+					<patch id="RRLoadPackGER"/>
+				</choice>
+				<choice name="Dutch">
+					<patch id="RRLoadPackDUT"/>
+				</choice>
+                <choice name="Spanish">
+					<patch id="RRLoadPackSPA"/>
+				</choice>
+                <choice name="Italian">
+					<patch id="RRLoadPackITA"/>
+				</choice>
+                <choice name="Korean">
+					<patch id="RRLoadPackKOR"/>
+				</choice>
+                <choice name="Russian">
+					<patch id="RRLoadPackRUS"/>
+				</choice>
+                <choice name="Turkish">
+					<patch id="RRLoadPackTUR"/>
+				</choice>
+                <choice name="Czech">
+					<patch id="RRLoadPackCZE"/>
+				</choice>
+			</option>
+			<option name="My Stuff">
+				<choice name="CTGP">
+					<patch id="RRCTGPLoad"/>
+				</choice>
+				<choice name="RR">
+					<patch id="RRLoad"/>
+				</choice>
+				<choice name="CTGP Music">
+					<patch id="RRCTGPLoadMusic"/>
+				</choice>
+				<choice name="RR Music">
+					<patch id="RRLoadMusic"/>
+				</choice>
+			</option>
+			<option name="Remove Blur">
+				<choice name="Enabled">
+					<patch id="RRBlur"/>
+				</choice>
+			</option>
+			<option name="Seperate Savegame">
+				<choice name="Enabled">
+					<patch id="RRSave"/>
+				</choice>
+			</option>
+		</section>
+	</options>	
+	<patch id="RRLoadPack">
+    		<memory offset="0x80005EFC" value="0000000A"/>
+    		<memory offset="0x800023D0" value="00000000"/>
+    		<memory offset="0x80002470" value="00000000"/>
+    		<memory offset="0x80002370" value="00000000"/>
+    		<memory offset="0x80002400" value="00000000"/>
+    		<memory offset="0x800024A0" value="00000000"/>
+    		<memory offset="0x800024E0" value="00000000"/>
+    		<memory offset="0x80002510" value="00000000"/>
+    		<memory offset="0x800018a8" value="00000000"/>
+    		<memory offset="0x80001804" value="00000000"/>
+	    	<memory valuefile="/RetroRewind6/Binaries/Loader.pul" offset="0x80004000"/>
+			<memory offset="0x80242698" value="4BDC1968" original="4e800020" /> <!--RMCP DOL-->
+			<memory offset="0x8000A3F4" value="4bff9c0c" original="4e800020" /> <!--RMCP REL-->
+			<memory offset="0x802417dc" value="4BDC2824" original="4e800020" /> <!--RMCE DOL-->
+			<memory offset="0x8000A3B4" value="4BFF9C4c" original="4e800020" /> <!--RMCE REL-->		
+			<memory offset="0x802425b8" value="4BDC1A48" original="4e800020" /> <!--RMCJ DOL-->
+			<memory offset="0x8000A350" value="4BFF9CB0" original="4e800020" /> <!--RMCJ REL-->
+	    	<savegame clone="true" external="/riivolution/save/RetroWFC/{$__gameid}{$__region}"/>
+			<folder external="/RetroRewind6/Binaries" disc="/Binaries" create="true"/>
+			<folder external="/RetroRewind6/Tracks" disc="/Race/Course" create="true"/>
+			<folder external="/RetroRewind6/Assets" disc="/" create="true"/>
+            <file disc="/Scene/UI/Channel.szs" external="/RetroRewind6/UI/Channel.szs" create="true" />
+            <file disc="/Scene/UI/Globe.szs" external="/RetroRewind6/UI/Globe.szs" create="true" />
+            <file disc="/Scene/UI/MenuSingle.szs" external="/RetroRewind6/UI/MenuSingle.szs" create="true" />
+            <file disc="/Scene/UI/Title.szs" external="/RetroRewind6/UI/Title.szs" create="true" />
+            <file disc="/Scene/UI/MenuMulti.szs" external="/RetroRewind6/UI/MenuMulti.szs" create="true" />
+            <file disc="/Scene/UI/Channel_R.szs" external="/RetroRewind6/UI/Channel.szs" create="true" />
+            <file disc="/Scene/UI/Globe_R.szs" external="/RetroRewind6/UI/Globe.szs" create="true" />
+            <file disc="/Scene/UI/MenuSingle_R.szs" external="/RetroRewind6/UI/MenuSingle.szs" create="true" />
+            <file disc="/Scene/UI/Title_R.szs" external="/RetroRewind6/UI/Title.szs" create="true" />
+            <file disc="/Scene/UI/MenuMulti_R.szs" external="/RetroRewind6/UI/MenuMulti.szs" create="true" />
+            <file disc="/Scene/UI/Title_E.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_F.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_G.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_I.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_S.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_J.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_K.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_M.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_Q.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Scene/UI/Title_U.szs" external="/RetroRewind6/UI/Title_U.szs" create="true" />
+            <file disc="/Race/Common_J.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" />      
+            <file disc="/Race/Common_U.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" />     
+            <file disc="/Race/Common_F.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" />     
+            <file disc="/Race/Common_G.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" />       
+            <file disc="/Race/Common_I.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" />
+            <file disc="/Race/Common_Q.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" /> 
+            <file disc="/Race/Common_M.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" />       
+            <file disc="/Race/Common_E.szs" external="/RetroRewind6/UI/Common_Uszs" create="true" />      
+            <file disc="/Race/Common_S.szs" external="/RetroRewind6/UI/Common_U.szs" create="true" /> 
+            <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+            <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/UI/English.szs" create="true" />
+			<folder external="/RetroRewind6/Ghosts/Experts" disc="/Experts" create="true" />
+			<folder external="/RetroRewind6/strm" disc="/sound/strm" create="true"/>
+	</patch>	
+	<patch id="RRFileReplacements">
+            <file disc="/Race/Course/120.szs" external="/RetroRewind6/Tracks/uMKS.szs" create="true" />
+            <file disc="/Race/Course/121.szs" external="/RetroRewind6/Tracks/uSSC.szs" create="true" />
+            <file disc="/Race/Course/122.szs" external="/RetroRewind6/Tracks/uTR.szs" create="true" />
+            <file disc="/Race/Course/123.szs" external="/RetroRewind6/Tracks/uMC.szs" create="true" />
+            <file disc="/Race/Course/124.szs" external="/RetroRewind6/Tracks/uTH.szs" create="true" />
+            <file disc="/Race/Course/125.szs" external="/RetroRewind6/Tracks/uTM.szs" create="true" />
+            <file disc="/Race/Course/126.szs" external="/RetroRewind6/Tracks/uSGF.szs" create="true" />
+            <file disc="/Race/Course/127.szs" external="/RetroRewind6/Tracks/uDS.szs" create="true" />
+            <file disc="/Race/Course/128.szs" external="/RetroRewind6/Tracks/uE.szs" create="true" />
+            <file disc="/Race/Course/129.szs" external="/RetroRewind6/Tracks/uMW.szs" create="true" />
+            <file disc="/Race/Course/130.szs" external="/RetroRewind6/Tracks/uCC.szs" create="true" />
+            <file disc="/Race/Course/131.szs" external="/RetroRewind6/Tracks/uBDD.szs" create="true" />
+            <file disc="/Race/Course/132.szs" external="/RetroRewind6/Tracks/uBC.szs" create="true" />
+            <file disc="/Race/Course/133.szs" external="/RetroRewind6/Tracks/uRR.szs" create="true" />
+            <file disc="/Race/Course/134.szs" external="/RetroRewind6/Tracks/urDDD.szs" create="true" />
+            <file disc="/Race/Course/135.szs" external="/RetroRewind6/Tracks/urRR.szs" create="true" />
+            <file disc="/Race/Course/136.szs" external="/RetroRewind6/Tracks/uEA.szs" create="true" />
+            <file disc="/Race/Course/137.szs" external="/RetroRewind6/Tracks/uHC.szs" create="true" />
+            <file disc="/Race/Course/138.szs" external="/RetroRewind6/Tracks/uCL.szs" create="true" />
+            <file disc="/Race/Course/139.szs" external="/RetroRewind6/Tracks/uAC.szs" create="true" />
+            <file disc="/Race/Course/140.szs" external="/RetroRewind6/Tracks/urRiR.szs" create="true" />
+            <file disc="/Race/Course/141.szs" external="/RetroRewind6/Tracks/uBB.szs" create="true" />
+            <file disc="/Race/Course/142.szs" external="/RetroRewind6/Tracks/sSHS.szs" create="true" />
+            <file disc="/Race/Course/143.szs" external="/RetroRewind6/Tracks/sYI.szs" create="true" />
+            <file disc="/Race/Course/144.szs" external="/RetroRewind6/Tracks/tTB.szs" create="true" />
+            <file disc="/Race/Course/145.szs" external="/RetroRewind6/Tracks/tMD.szs" create="true" />
+            <file disc="/Race/Course/146.szs" external="/RetroRewind6/Tracks/tMM.szs" create="true" />
+            <file disc="/Race/Course/147.szs" external="/RetroRewind6/Tracks/tNH.szs" create="true" />
+            <file disc="/Race/Course/148.szs" external="/RetroRewind6/Tracks/rMC1.szs" create="true" />
+            <file disc="/Race/Course/149.szs" external="/RetroRewind6/Tracks/rCI1.szs" create="true" />
+            <file disc="/Race/Course/150.szs" external="/RetroRewind6/Tracks/rRR1.szs" create="true" />
+            <file disc="/Race/Course/151.szs" external="/RetroRewind6/Tracks/rRR2.szs" create="true" />
+            <file disc="/Race/Course/152.szs" external="/RetroRewind6/Tracks/rVL1.szs" create="true" />
+            <file disc="/Race/Course/153.szs" external="/RetroRewind6/Tracks/rVL2.szs" create="true" />
+            <file disc="/Race/Course/154.szs" external="/RetroRewind6/Tracks/rGV1.szs" create="true" />
+            <file disc="/Race/Course/155.szs" external="/RetroRewind6/Tracks/rBC1.szs" create="true" />
+            <file disc="/Race/Course/156.szs" external="/RetroRewind6/Tracks/rDP1.szs" create="true" />
+            <file disc="/Race/Course/157.szs" external="/RetroRewind6/Tracks/trBC3.szs" create="true" />
+            <file disc="/Race/Course/158.szs" external="/RetroRewind6/Tracks/trCM.szs" create="true" />
+            <file disc="/Race/Course/159.szs" external="/RetroRewind6/Tracks/trPC.szs" create="true" />
+            <file disc="/Race/Course/160.szs" external="/RetroRewind6/Tracks/trRP.szs" create="true" />
+            <file disc="/Race/Course/161.szs" external="/RetroRewind6/Tracks/trBL.szs" create="true" />
+            <file disc="/Race/Course/162.szs" external="/RetroRewind6/Tracks/trSG.szs" create="true" />
+            <file disc="/Race/Course/163.szs" external="/RetroRewind6/Tracks/trCCI.szs" create="true" />
+            <file disc="/Race/Course/164.szs" external="/RetroRewind6/Tracks/trSW.szs" create="true" />
+            <file disc="/Race/Course/165.szs" external="/RetroRewind6/Tracks/trSL.szs" create="true" />
+            <file disc="/Race/Course/166.szs" external="/RetroRewind6/Tracks/trLP.szs" create="true" />
+            <file disc="/Race/Course/167.szs" external="/RetroRewind6/Tracks/gpMB.szs" create="true" />
+            <file disc="/Race/Course/168.szs" external="/RetroRewind6/Tracks/gpBR.szs" create="true" />
+            <file disc="/Race/Course/169.szs" external="/RetroRewind6/Tracks/gpSP.szs" create="true" />
+            <file disc="/Race/Course/170.szs" external="/RetroRewind6/Tracks/gpBC.szs" create="true" />
+            <file disc="/Race/Course/171.szs" external="/RetroRewind6/Tracks/gpCW.szs" create="true" />
+            <file disc="/Race/Course/172.szs" external="/RetroRewind6/Tracks/sfcDP1.szs" create="true" />
+            <file disc="/Race/Course/173.szs" external="/RetroRewind6/Tracks/dsDS.szs" create="true" />
+            <file disc="/Race/Course/174.szs" external="/RetroRewind6/Tracks/dsDC.szs" create="true" />
+            <file disc="/Race/Course/175.szs" external="/RetroRewind6/Tracks/dsNB.szs" create="true" />
+            <file disc="/sound/strm/120_N.brstm" external="/RetroRewind6/strm/uMKS_N.brstm" create="true" />
+            <file disc="/sound/strm/121_N.brstm" external="/RetroRewind6/strm/uSSC_N.brstm" create="true" />
+            <file disc="/sound/strm/122_N.brstm" external="/RetroRewind6/strm/uTR_N.brstm" create="true" />
+            <file disc="/sound/strm/123_N.brstm" external="/RetroRewind6/strm/uMC_N.brstm" create="true" />
+            <file disc="/sound/strm/124_N.brstm" external="/RetroRewind6/strm/uTH_N.brstm" create="true" />
+            <file disc="/sound/strm/125_N.brstm" external="/RetroRewind6/strm/uTM_N.brstm" create="true" />
+            <file disc="/sound/strm/126_N.brstm" external="/RetroRewind6/strm/uSGF_N.brstm" create="true" />
+            <file disc="/sound/strm/127_N.brstm" external="/RetroRewind6/strm/uDS_N.brstm" create="true" />
+            <file disc="/sound/strm/128_N.brstm" external="/RetroRewind6/strm/uE_N.brstm" create="true" />
+            <file disc="/sound/strm/129_N.brstm" external="/RetroRewind6/strm/uMW_N.brstm" create="true" />
+            <file disc="/sound/strm/130_N.brstm" external="/RetroRewind6/strm/uCC_N.brstm" create="true" />
+            <file disc="/sound/strm/131_N.brstm" external="/RetroRewind6/strm/uBDD_N.brstm" create="true" />
+            <file disc="/sound/strm/132_N.brstm" external="/RetroRewind6/strm/uBC_N.brstm" create="true" />
+            <file disc="/sound/strm/133_N.brstm" external="/RetroRewind6/strm/uRR_N.brstm" create="true" />
+            <file disc="/sound/strm/134_N.brstm" external="/RetroRewind6/strm/urDDD_N.brstm" create="true" />
+            <file disc="/sound/strm/135_N.brstm" external="/RetroRewind6/strm/urRR_N.brstm" create="true" />
+            <file disc="/sound/strm/136_N.brstm" external="/RetroRewind6/strm/uEA_N.brstm" create="true" />
+            <file disc="/sound/strm/137_N.brstm" external="/RetroRewind6/strm/uHC_N.brstm" create="true" />
+            <file disc="/sound/strm/138_N.brstm" external="/RetroRewind6/strm/uCL_N.brstm" create="true" />
+            <file disc="/sound/strm/139_N.brstm" external="/RetroRewind6/strm/uAC_N.brstm" create="true" />
+            <file disc="/sound/strm/140_N.brstm" external="/RetroRewind6/strm/urRiR_N.brstm" create="true" />
+            <file disc="/sound/strm/141_N.brstm" external="/RetroRewind6/strm/uBB_N.brstm" create="true" />
+            <file disc="/sound/strm/142_N.brstm" external="/RetroRewind6/strm/sSHS_N.brstm" create="true" />
+            <file disc="/sound/strm/143_N.brstm" external="/RetroRewind6/strm/sYI_N.brstm" create="true" />
+            <file disc="/sound/strm/144_N.brstm" external="/RetroRewind6/strm/tTB_N.brstm" create="true" />
+            <file disc="/sound/strm/145_N.brstm" external="/RetroRewind6/strm/tMD_N.brstm" create="true" />
+            <file disc="/sound/strm/146_N.brstm" external="/RetroRewind6/strm/tMM_N.brstm" create="true" />
+            <file disc="/sound/strm/147_N.brstm" external="/RetroRewind6/strm/tNH_N.brstm" create="true" />
+            <file disc="/sound/strm/148_N.brstm" external="/RetroRewind6/strm/rMC1_N.brstm" create="true" />
+            <file disc="/sound/strm/149_N.brstm" external="/RetroRewind6/strm/rCI1_N.brstm" create="true" />
+            <file disc="/sound/strm/150_N.brstm" external="/RetroRewind6/strm/rRR1_N.brstm" create="true" />
+            <file disc="/sound/strm/151_N.brstm" external="/RetroRewind6/strm/rRR2_N.brstm" create="true" />
+            <file disc="/sound/strm/152_N.brstm" external="/RetroRewind6/strm/rVL1_N.brstm" create="true" />
+            <file disc="/sound/strm/153_N.brstm" external="/RetroRewind6/strm/rVL2_N.brstm" create="true" />
+            <file disc="/sound/strm/154_N.brstm" external="/RetroRewind6/strm/rGV1_N.brstm" create="true" />
+            <file disc="/sound/strm/155_N.brstm" external="/RetroRewind6/strm/rBC1_N.brstm" create="true" />
+            <file disc="/sound/strm/156_N.brstm" external="/RetroRewind6/strm/rDP1_N.brstm" create="true" />
+            <file disc="/sound/strm/157_N.brstm" external="/RetroRewind6/strm/trBC3_N.brstm" create="true" />
+            <file disc="/sound/strm/158_N.brstm" external="/RetroRewind6/strm/trCM_N.brstm" create="true" />
+            <file disc="/sound/strm/159_N.brstm" external="/RetroRewind6/strm/trPC_N.brstm" create="true" />
+            <file disc="/sound/strm/160_N.brstm" external="/RetroRewind6/strm/trRP_N.brstm" create="true" />
+            <file disc="/sound/strm/161_N.brstm" external="/RetroRewind6/strm/trBL_N.brstm" create="true" />
+            <file disc="/sound/strm/162_N.brstm" external="/RetroRewind6/strm/trSG_N.brstm" create="true" />
+            <file disc="/sound/strm/163_N.brstm" external="/RetroRewind6/strm/trCCI_N.brstm" create="true" />
+            <file disc="/sound/strm/164_N.brstm" external="/RetroRewind6/strm/trSW_N.brstm" create="true" />
+            <file disc="/sound/strm/165_N.brstm" external="/RetroRewind6/strm/trSL_N.brstm" create="true" />
+            <file disc="/sound/strm/166_N.brstm" external="/RetroRewind6/strm/trLP_N.brstm" create="true" />
+            <file disc="/sound/strm/167_N.brstm" external="/RetroRewind6/strm/gpMB_N.brstm" create="true" />
+            <file disc="/sound/strm/168_N.brstm" external="/RetroRewind6/strm/gpBR_N.brstm" create="true" />
+            <file disc="/sound/strm/169_N.brstm" external="/RetroRewind6/strm/gpSP_N.brstm" create="true" />
+            <file disc="/sound/strm/170_N.brstm" external="/RetroRewind6/strm/gpBC_N.brstm" create="true" />
+            <file disc="/sound/strm/171_N.brstm" external="/RetroRewind6/strm/gpCW_N.brstm" create="true" />
+            <file disc="/sound/strm/172_N.brstm" external="/RetroRewind6/strm/sfcDP1_N.brstm" create="true" />
+            <file disc="/sound/strm/173_N.brstm" external="/RetroRewind6/strm/dsDS_N.brstm" create="true" />
+            <file disc="/sound/strm/174_N.brstm" external="/RetroRewind6/strm/dsDC_N.brstm" create="true" />
+            <file disc="/sound/strm/175_N.brstm" external="/RetroRewind6/strm/dsNB_N.brstm" create="true" />
+            <file disc="/sound/strm/120_F.brstm" external="/RetroRewind6/strm/uMKS_F.brstm" create="true" />
+            <file disc="/sound/strm/121_F.brstm" external="/RetroRewind6/strm/uSSC_F.brstm" create="true" />
+            <file disc="/sound/strm/122_F.brstm" external="/RetroRewind6/strm/uTR_F.brstm" create="true" />
+            <file disc="/sound/strm/123_F.brstm" external="/RetroRewind6/strm/uMC_F.brstm" create="true" />
+            <file disc="/sound/strm/124_F.brstm" external="/RetroRewind6/strm/uTH_F.brstm" create="true" />
+            <file disc="/sound/strm/125_F.brstm" external="/RetroRewind6/strm/uTM_F.brstm" create="true" />
+            <file disc="/sound/strm/126_F.brstm" external="/RetroRewind6/strm/uSGF_F.brstm" create="true" />
+            <file disc="/sound/strm/127_F.brstm" external="/RetroRewind6/strm/uDS_F.brstm" create="true" />
+            <file disc="/sound/strm/128_F.brstm" external="/RetroRewind6/strm/uE_F.brstm" create="true" />
+            <file disc="/sound/strm/129_F.brstm" external="/RetroRewind6/strm/uMW_F.brstm" create="true" />
+            <file disc="/sound/strm/130_F.brstm" external="/RetroRewind6/strm/uCC_F.brstm" create="true" />
+            <file disc="/sound/strm/131_F.brstm" external="/RetroRewind6/strm/uBDD_F.brstm" create="true" />
+            <file disc="/sound/strm/132_F.brstm" external="/RetroRewind6/strm/uBC_F.brstm" create="true" />
+            <file disc="/sound/strm/133_F.brstm" external="/RetroRewind6/strm/uRR_F.brstm" create="true" />
+            <file disc="/sound/strm/134_F.brstm" external="/RetroRewind6/strm/urDDD_F.brstm" create="true" />
+            <file disc="/sound/strm/135_F.brstm" external="/RetroRewind6/strm/urRR_F.brstm" create="true" />
+            <file disc="/sound/strm/136_F.brstm" external="/RetroRewind6/strm/uEA_F.brstm" create="true" />
+            <file disc="/sound/strm/137_F.brstm" external="/RetroRewind6/strm/uHC_F.brstm" create="true" />
+            <file disc="/sound/strm/138_F.brstm" external="/RetroRewind6/strm/uCL_F.brstm" create="true" />
+            <file disc="/sound/strm/139_F.brstm" external="/RetroRewind6/strm/uAC_F.brstm" create="true" />
+            <file disc="/sound/strm/140_F.brstm" external="/RetroRewind6/strm/urRiR_F.brstm" create="true" />
+            <file disc="/sound/strm/141_F.brstm" external="/RetroRewind6/strm/uBB_F.brstm" create="true" />
+            <file disc="/sound/strm/142_F.brstm" external="/RetroRewind6/strm/sSHS_F.brstm" create="true" />
+            <file disc="/sound/strm/143_F.brstm" external="/RetroRewind6/strm/sYI_F.brstm" create="true" />
+            <file disc="/sound/strm/144_F.brstm" external="/RetroRewind6/strm/tTB_F.brstm" create="true" />
+            <file disc="/sound/strm/145_F.brstm" external="/RetroRewind6/strm/tMD_F.brstm" create="true" />
+            <file disc="/sound/strm/146_F.brstm" external="/RetroRewind6/strm/tMM_F.brstm" create="true" />
+            <file disc="/sound/strm/147_F.brstm" external="/RetroRewind6/strm/tNH_F.brstm" create="true" />
+            <file disc="/sound/strm/148_F.brstm" external="/RetroRewind6/strm/rMC1_F.brstm" create="true" />
+            <file disc="/sound/strm/149_F.brstm" external="/RetroRewind6/strm/rCI1_F.brstm" create="true" />
+            <file disc="/sound/strm/150_F.brstm" external="/RetroRewind6/strm/rRR1_F.brstm" create="true" />
+            <file disc="/sound/strm/151_F.brstm" external="/RetroRewind6/strm/rRR2_F.brstm" create="true" />
+            <file disc="/sound/strm/152_F.brstm" external="/RetroRewind6/strm/rVL1_F.brstm" create="true" />
+            <file disc="/sound/strm/153_F.brstm" external="/RetroRewind6/strm/rVL2_F.brstm" create="true" />
+            <file disc="/sound/strm/154_F.brstm" external="/RetroRewind6/strm/rGV1_F.brstm" create="true" />
+            <file disc="/sound/strm/155_F.brstm" external="/RetroRewind6/strm/rBC1_F.brstm" create="true" />
+            <file disc="/sound/strm/156_F.brstm" external="/RetroRewind6/strm/rDP1_F.brstm" create="true" />
+            <file disc="/sound/strm/157_F.brstm" external="/RetroRewind6/strm/trBC3_F.brstm" create="true" />
+            <file disc="/sound/strm/158_F.brstm" external="/RetroRewind6/strm/trCM_F.brstm" create="true" />
+            <file disc="/sound/strm/159_F.brstm" external="/RetroRewind6/strm/trPC_F.brstm" create="true" />
+            <file disc="/sound/strm/160_F.brstm" external="/RetroRewind6/strm/trRP_F.brstm" create="true" />
+            <file disc="/sound/strm/161_F.brstm" external="/RetroRewind6/strm/trBL_F.brstm" create="true" />
+            <file disc="/sound/strm/162_F.brstm" external="/RetroRewind6/strm/trSG_F.brstm" create="true" />
+            <file disc="/sound/strm/163_F.brstm" external="/RetroRewind6/strm/trCCI_F.brstm" create="true" />
+            <file disc="/sound/strm/164_F.brstm" external="/RetroRewind6/strm/trSW_F.brstm" create="true" />
+            <file disc="/sound/strm/165_F.brstm" external="/RetroRewind6/strm/trSL_F.brstm" create="true" />
+            <file disc="/sound/strm/166_F.brstm" external="/RetroRewind6/strm/trLP_F.brstm" create="true" />
+            <file disc="/sound/strm/167_F.brstm" external="/RetroRewind6/strm/gpMB_F.brstm" create="true" />
+            <file disc="/sound/strm/168_F.brstm" external="/RetroRewind6/strm/gpBR_F.brstm" create="true" />
+            <file disc="/sound/strm/169_F.brstm" external="/RetroRewind6/strm/gpSP_F.brstm" create="true" />
+            <file disc="/sound/strm/170_F.brstm" external="/RetroRewind6/strm/gpBC_F.brstm" create="true" />
+            <file disc="/sound/strm/171_F.brstm" external="/RetroRewind6/strm/gpCW_F.brstm" create="true" />
+            <file disc="/sound/strm/172_F.brstm" external="/RetroRewind6/strm/sfcDP1_F.brstm" create="true" />
+            <file disc="/sound/strm/173_F.brstm" external="/RetroRewind6/strm/dsDS_F.brstm" create="true" />
+            <file disc="/sound/strm/174_F.brstm" external="/RetroRewind6/strm/dsDC_F.brstm" create="true" />
+            <file disc="/sound/strm/175_F.brstm" external="/RetroRewind6/strm/dsNB_F.brstm" create="true" />
+			<file disc="/Race/Course/176.szs" external="/RetroRewind6/CT/Tracks/Z0.szs" create="true" />
+			<file disc="/Race/Course/177.szs" external="/RetroRewind6/CT/Tracks/Z1.szs" create="true" />
+			<file disc="/Race/Course/178.szs" external="/RetroRewind6/CT/Tracks/Z2.szs" create="true" />
+			<file disc="/Race/Course/179.szs" external="/RetroRewind6/CT/Tracks/Z3.szs" create="true" />
+			<file disc="/Race/Course/180.szs" external="/RetroRewind6/CT/Tracks/Z4.szs" create="true" />
+			<file disc="/Race/Course/181.szs" external="/RetroRewind6/CT/Tracks/Z5.szs" create="true" />
+			<file disc="/Race/Course/182.szs" external="/RetroRewind6/CT/Tracks/Z6.szs" create="true" />
+			<file disc="/Race/Course/183.szs" external="/RetroRewind6/CT/Tracks/Z7.szs" create="true" />
+			<file disc="/Race/Course/184.szs" external="/RetroRewind6/CT/Tracks/Z8.szs" create="true" />
+			<file disc="/Race/Course/185.szs" external="/RetroRewind6/CT/Tracks/Z9.szs" create="true" />
+			<file disc="/Race/Course/186.szs" external="/RetroRewind6/CT/Tracks/Z10.szs" create="true" />
+			<file disc="/Race/Course/187.szs" external="/RetroRewind6/CT/Tracks/Z11.szs" create="true" />
+			<file disc="/Race/Course/188.szs" external="/RetroRewind6/CT/Tracks/Z12.szs" create="true" />
+			<file disc="/Race/Course/189.szs" external="/RetroRewind6/CT/Tracks/Z13.szs" create="true" />
+			<file disc="/Race/Course/190.szs" external="/RetroRewind6/CT/Tracks/Z14.szs" create="true" />
+			<file disc="/Race/Course/191.szs" external="/RetroRewind6/CT/Tracks/Z15.szs" create="true" />
+			<file disc="/Race/Course/192.szs" external="/RetroRewind6/CT/Tracks/Z16.szs" create="true" />
+			<file disc="/Race/Course/193.szs" external="/RetroRewind6/CT/Tracks/Z17.szs" create="true" />
+			<file disc="/Race/Course/194.szs" external="/RetroRewind6/CT/Tracks/Z18.szs" create="true" />
+			<file disc="/Race/Course/195.szs" external="/RetroRewind6/CT/Tracks/Z19.szs" create="true" />
+			<file disc="/Race/Course/196.szs" external="/RetroRewind6/CT/Tracks/Z20.szs" create="true" />
+			<file disc="/Race/Course/197.szs" external="/RetroRewind6/CT/Tracks/Z21.szs" create="true" />
+			<file disc="/Race/Course/198.szs" external="/RetroRewind6/CT/Tracks/Z22.szs" create="true" />
+			<file disc="/Race/Course/199.szs" external="/RetroRewind6/CT/Tracks/Z23.szs" create="true" />
+			<file disc="/Race/Course/200.szs" external="/RetroRewind6/CT/Tracks/Z24.szs" create="true" />
+			<file disc="/Race/Course/201.szs" external="/RetroRewind6/CT/Tracks/Z25.szs" create="true" />
+			<file disc="/Race/Course/202.szs" external="/RetroRewind6/CT/Tracks/Z26.szs" create="true" />
+			<file disc="/Race/Course/203.szs" external="/RetroRewind6/CT/Tracks/Z27.szs" create="true" />
+			<file disc="/Race/Course/204.szs" external="/RetroRewind6/CT/Tracks/Z28.szs" create="true" />
+			<file disc="/Race/Course/205.szs" external="/RetroRewind6/CT/Tracks/Z29.szs" create="true" />
+			<file disc="/Race/Course/206.szs" external="/RetroRewind6/CT/Tracks/Z30.szs" create="true" />
+			<file disc="/Race/Course/207.szs" external="/RetroRewind6/CT/Tracks/Z31.szs" create="true" />
+			<file disc="/Race/Course/208.szs" external="/RetroRewind6/CT/Tracks/Z32.szs" create="true" />
+			<file disc="/Race/Course/209.szs" external="/RetroRewind6/CT/Tracks/Z33.szs" create="true" />
+			<file disc="/Race/Course/210.szs" external="/RetroRewind6/CT/Tracks/Z34.szs" create="true" />
+			<file disc="/Race/Course/211.szs" external="/RetroRewind6/CT/Tracks/Z35.szs" create="true" />
+			<file disc="/Race/Course/212.szs" external="/RetroRewind6/CT/Tracks/Z36.szs" create="true" />
+			<file disc="/Race/Course/213.szs" external="/RetroRewind6/CT/Tracks/Z37.szs" create="true" />
+			<file disc="/Race/Course/214.szs" external="/RetroRewind6/CT/Tracks/Z38.szs" create="true" />
+			<file disc="/Race/Course/215.szs" external="/RetroRewind6/CT/Tracks/Z39.szs" create="true" />
+			<file disc="/Race/Course/216.szs" external="/RetroRewind6/CT/Tracks/Z40.szs" create="true" />
+			<file disc="/Race/Course/217.szs" external="/RetroRewind6/CT/Tracks/Z41.szs" create="true" />
+			<file disc="/Race/Course/218.szs" external="/RetroRewind6/CT/Tracks/Z42.szs" create="true" />
+			<file disc="/Race/Course/219.szs" external="/RetroRewind6/CT/Tracks/Z43.szs" create="true" />
+			<file disc="/Race/Course/220.szs" external="/RetroRewind6/CT/Tracks/Z44.szs" create="true" />
+			<file disc="/Race/Course/221.szs" external="/RetroRewind6/CT/Tracks/Z45.szs" create="true" />
+			<file disc="/Race/Course/222.szs" external="/RetroRewind6/CT/Tracks/Z46.szs" create="true" />
+			<file disc="/Race/Course/223.szs" external="/RetroRewind6/CT/Tracks/Z47.szs" create="true" />
+			<file disc="/Race/Course/224.szs" external="/RetroRewind6/CT/Tracks/Z48.szs" create="true" />
+			<file disc="/Race/Course/225.szs" external="/RetroRewind6/CT/Tracks/Z49.szs" create="true" />
+			<file disc="/Race/Course/226.szs" external="/RetroRewind6/CT/Tracks/Z50.szs" create="true" />
+			<file disc="/Race/Course/227.szs" external="/RetroRewind6/CT/Tracks/Z51.szs" create="true" />
+			<file disc="/Race/Course/228.szs" external="/RetroRewind6/CT/Tracks/Z52.szs" create="true" />
+			<file disc="/Race/Course/229.szs" external="/RetroRewind6/CT/Tracks/Z53.szs" create="true" />
+			<file disc="/Race/Course/230.szs" external="/RetroRewind6/CT/Tracks/Z54.szs" create="true" />
+			<file disc="/Race/Course/231.szs" external="/RetroRewind6/CT/Tracks/Z55.szs" create="true" />
+			<file disc="/Race/Course/232.szs" external="/RetroRewind6/CT/Tracks/Z56.szs" create="true" />
+			<file disc="/Race/Course/233.szs" external="/RetroRewind6/CT/Tracks/Z57.szs" create="true" />
+			<file disc="/Race/Course/234.szs" external="/RetroRewind6/CT/Tracks/Z58.szs" create="true" />
+			<file disc="/Race/Course/235.szs" external="/RetroRewind6/CT/Tracks/Z59.szs" create="true" />
+			<file disc="/Race/Course/236.szs" external="/RetroRewind6/CT/Tracks/Z60.szs" create="true" />
+			<file disc="/Race/Course/237.szs" external="/RetroRewind6/CT/Tracks/Z61.szs" create="true" />
+			<file disc="/Race/Course/238.szs" external="/RetroRewind6/CT/Tracks/Z62.szs" create="true" />
+			<file disc="/Race/Course/239.szs" external="/RetroRewind6/CT/Tracks/Z63.szs" create="true" />
+			<file disc="/Race/Course/240.szs" external="/RetroRewind6/CT/Tracks/Z64.szs" create="true" />
+			<file disc="/Race/Course/241.szs" external="/RetroRewind6/CT/Tracks/Z65.szs" create="true" />
+			<file disc="/Race/Course/242.szs" external="/RetroRewind6/CT/Tracks/Z66.szs" create="true" />
+			<file disc="/Race/Course/243.szs" external="/RetroRewind6/CT/Tracks/Z67.szs" create="true" />
+			<file disc="/Race/Course/244.szs" external="/RetroRewind6/CT/Tracks/Z68.szs" create="true" />
+			<file disc="/Race/Course/245.szs" external="/RetroRewind6/CT/Tracks/Z69.szs" create="true" />
+			<file disc="/Race/Course/246.szs" external="/RetroRewind6/CT/Tracks/Z70.szs" create="true" />
+			<file disc="/Race/Course/247.szs" external="/RetroRewind6/CT/Tracks/Z71.szs" create="true" />
+			<file disc="/Race/Course/248.szs" external="/RetroRewind6/CT/Tracks/Z72.szs" create="true" />
+			<file disc="/Race/Course/249.szs" external="/RetroRewind6/CT/Tracks/Z73.szs" create="true" />
+			<file disc="/Race/Course/250.szs" external="/RetroRewind6/CT/Tracks/Z74.szs" create="true" />
+			<file disc="/Race/Course/251.szs" external="/RetroRewind6/CT/Tracks/Z75.szs" create="true" />
+			<file disc="/Race/Course/252.szs" external="/RetroRewind6/CT/Tracks/Z76.szs" create="true" />
+			<file disc="/Race/Course/253.szs" external="/RetroRewind6/CT/Tracks/Z77.szs" create="true" />
+			<file disc="/Race/Course/254.szs" external="/RetroRewind6/CT/Tracks/Z78.szs" create="true" />
+			<file disc="/Race/Course/255.szs" external="/RetroRewind6/CT/Tracks/Z79.szs" create="true" />
+	</patch>
+	<patch id="RRLoadPackJPN">
+		<folder external="/RetroRewind6/Language/JPN/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/JPN/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/JPN/Strap/jp.szs" create="true" />
+                <file disc="/Scene/UI/Font.szs" external="/RetroRewind6/Language/JPN/Font/Font.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/JPN/UI/Award_J.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />     
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />       
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" /> 
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />       
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />      
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/JPN/UI/Common_J.szs" create="true" />  
+	</patch>	
+	<patch id="RRLoadPackFRE">
+		<folder external="/RetroRewind6/Language/FRA/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/FRA/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/FRA/Strap/French.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/FRA/UI/Award_F.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />     
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />       
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" /> 
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />       
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />      
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/FRA/UI/Common_F.szs" create="true" />  
+	</patch>	
+	<patch id="RRLoadPackGER">
+		<folder external="/RetroRewind6/Language/GER/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/GER/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/GER/Strap/German.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/GER/UI/Award_G.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />     
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />       
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" /> 
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />       
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />      
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/GER/UI/Common_G.szs" create="true" />   
+	</patch>	
+	<patch id="RRLoadPackDUT">
+		<folder external="/RetroRewind6/Language/DUT/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/DUT/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/DUT/Strap/Dutch.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/DUT/UI/Award_D.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />     
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />       
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" /> 
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />       
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />      
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/DUT/UI/Common_D.szs" create="true" />   
+	</patch>
+	<patch id="RRLoadPackSPA">
+		<folder external="/RetroRewind6/Language/SPA/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/SPA/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/SPA/Strap/Spanish.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/SPA/UI/Award_S.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />     
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />       
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" /> 
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />       
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />      
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/SPA/UI/Common_S.szs" create="true" />       
+	</patch>	
+        <patch id="RRLoadPackITA">
+		<folder external="/RetroRewind6/Language/ITA/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/ITA/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/ITA/Strap/Italian.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/ITA/UI/Award_I.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />        
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />       
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />        
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />   
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />   
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />        
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />        
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/ITA/UI/Common_I.szs" create="true" />    
+	</patch>
+        <patch id="RRLoadPackKOR">
+		<folder external="/RetroRewind6/Language/KOR/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/KOR/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/KOR/Strap/Korean.szs" create="true" />
+                <file disc="/Scene/UI/Font_K.szs" external="/RetroRewind6/Language/KOR/Font/Font-K.szs" create="true" />
+                <file disc="/Scene/UI/Font.szs" external="/RetroRewind6/Language/KOR/Font/Font_K-force.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/KOR/UI/Award_K.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />      
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />        
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />    
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />    
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />        
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />    
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/KOR/UI/Common_K.szs" create="true" />    
+	</patch>
+        <patch id="RRLoadPackRUS">
+		<folder external="/RetroRewind6/Language/RUS/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/RUS/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/RUS/Strap/Russian.szs" create="true" />
+                <file disc="/Scene/UI/Font.szs" external="/RetroRewind6/Language/RUS/Font/Font.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/RUS/UI/Award_R.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />    
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />   
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />     
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />   
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />   
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />      
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />     
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/RUS/UI/Common_R.szs" create="true" />   
+    </patch>
+        <patch id="RRLoadPackTUR">
+		<folder external="/RetroRewind6/Language/TUR/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/TUR/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/TUR/Strap/Korean.szs" create="true" />
+                <file disc="/Scene/UI/Font.szs" external="/RetroRewind6/Language/TUR/Font/Font.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/TUR/UI/Award_T.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />    
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />   
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />     
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />   
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />   
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />      
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />     
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/TUR/UI/Common_T.szs" create="true" />   
+    </patch>
+	<patch id="RRLoadPackCZE">
+		<folder external="/RetroRewind6/Language/CZE/Binaries" disc="/Binaries" create="true"/>
+		<folder external="/RetroRewind6/Language/CZE/Assets" disc="/" create="true"/>
+                <file disc="/Boot/Strap/jp/jp.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Dutch.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/eu/English.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/eu/French.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/eu/German.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Italian.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/eu/Spanish_EU.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/us/English.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/us/Spanish_US.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/us/French.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Boot/Strap/kr/Korean.szs" external="/RetroRewind6/Language/CZE/Strap/Czech.szs" create="true" />
+                <file disc="/Scene/UI/Font.szs" external="/RetroRewind6/Language/CZE/Font/Font.szs" create="true" />
+                <file disc="/Scene/UI/Award_E.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_F.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_G.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_I.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_S.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_J.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_K.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_M.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_Q.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Scene/UI/Award_U.szs" external="/RetroRewind6/Language/CZE/UI/Award_C.szs" create="true" />
+                <file disc="/Race/Common_J.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />      
+                <file disc="/Race/Common_U.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />     
+                <file disc="/Race/Common_F.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />     
+                <file disc="/Race/Common_G.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />       
+                <file disc="/Race/Common_I.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />
+                <file disc="/Race/Common_Q.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" /> 
+                <file disc="/Race/Common_M.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />       
+                <file disc="/Race/Common_E.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />      
+                <file disc="/Race/Common_S.szs" external="/RetroRewind6/Language/CZE/UI/Common_C.szs" create="true" />  
+	</patch>		
+	<patch id="RRCTGPLoad">
+		<folder external="/ctgpr/My Stuff" recursive="false"/>
+		<folder external="/ctgpr/My Stuff" disc="/"/>
+	</patch>	
+	<patch id="RRLoad">
+        	<folder external="/RetroRewind6/MyStuff" recursive="false"/>
+        	<folder external="/RetroRewind6/MyStuff" disc="/"/>
+	</patch>
+	<patch id="RRBlur">
+        <memory  offset="0x8016fba0" value="48000040" original="41820040"/>
+        <memory  offset="0x8016fb00" value="48000040" original="41820040"/>
+        <memory  offset="0x8016fac0" value="48000040" original="41820040"/>
+        <memory  offset="0x8016fc3c" value="48000040" original="41820040"/>
+	</patch>
+	<patch id="RRSave">
+	    <savegame clone="false" external="/riivolution/save/RetroWFC2/{$__gameid}{$__region}"/>
+	</patch>
+	<patch id="RRCTGPLoadMusic">
+		<folder external="/ctgpr/My Stuff" recursive="false" disc="/sound/strm" />
+		<folder external="/ctgpr/My Stuff" recursive="false" disc="/sound" />
+	</patch>
+	<patch id="RRLoadMusic">
+		<folder external="/RetroRewind6/MyStuff" recursive="false" disc="/sound/strm" />
+		<folder external="/RetroRewind6/MyStuff" recursive="false" disc="/sound" />
+	</patch>
+</wiidisc>
